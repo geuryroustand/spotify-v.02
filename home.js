@@ -37,7 +37,8 @@ function createCards (){
 
         <div class="col-12">
           <div class="card-body text-left">
-            <h6 class="card-text">${data.artist.name}</h6>
+          <a href="artist.html?artist_id=${data.artist.id}"><h6 class="card-text">${data.artist.name}</h6></a>
+          <h6 class="card-text">${data.title}</h6>
           </div>
         </div>
       </div>

@@ -56,9 +56,9 @@ const createElmentHtml = () => {
 
 window.onload = () => {
   const artistURL = new URLSearchParams(window.location.search).get(
-    'artist_id'
+    'album_Id'
   );
-  //   console.log(artistURL);
+    console.log(artistURL);
 };
 
 // FETCH with async / await

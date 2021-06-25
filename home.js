@@ -32,7 +32,7 @@ function createCards (){
     <div class="card-homepage text-center">
       <div class="row">
         <div class="col-12">
-          <img src="${data.album.cover_medium}" class="card-img-top img-fluid rounded-0" alt="image">
+          <a href="album.html?album_Id=${data.album.id}"><img src="${data.album.cover_medium}" class="card-img-top img-fluid rounded-0" alt="image"></a>
         </div>
 
         <div class="col-12">

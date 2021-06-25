@@ -1,9 +1,10 @@
-let dataFromSearch = {}
+let dataFromSearch
+
 
 
 const searchFetch = async (query) => {
     try {
-        let response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=" + query)
+        let response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + query)
         let dataSearched = await response.json()
         return dataSearched
     } catch (e) {
@@ -15,7 +16,9 @@ const search = async (userSearchValue) => {
     dataFromSearch = data
 }
 
+window.onload = () => {
+    let IdUrl = new URLSearchParams(window.location.search).get("album_Id")
+    search(IdUrl)
+    
+}
 
-
-// Tests
-search('queen')

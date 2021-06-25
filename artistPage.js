@@ -55,10 +55,14 @@ const createElmentHtml = () => {
 // })
 
 window.onload = () => {
-  const artistURL = new URLSearchParams(window.location.search).get(
-    'album_Id'
-  );
-    console.log(artistURL);
+  const artistURL = new URLSearchParams(window.location.search).get('album_Id');
+
+  fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${artistURL}`)
+    .then(response => response.json())
+    .then(data => 
+      
+      
+      );
 };
 
 // FETCH with async / await

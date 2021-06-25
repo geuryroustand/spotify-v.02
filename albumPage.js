@@ -19,6 +19,7 @@ const loadData = async (userSearchValue) => {
     dataFromSearch = data
     // Load the cards
     createTracksAlbumPage()
+    createAlbumInfo()
 }
 
 window.onload = () => {
@@ -36,8 +37,6 @@ function createTracksAlbumPage (){
     firstSection.innerHTML =''
     let artistInfo = dataFromSearch.tracks.data
 
-    console.log(artistInfo)
-
     artistInfo.forEach(albumData => firstSection.insertAdjacentHTML('afterbegin', `<span>
     <div class="d-flex justify-content-between ol-list-div">
       <li>${albumData.title}</li>
@@ -48,3 +47,32 @@ function createTracksAlbumPage (){
   </span>`) )
    
 }
+
+
+
+// How to target HTML element outside of a function
+
+// let test
+function createAlbumInfo(){
+    // let albumInfo = document.getElementById('album-info')
+    // albumImg = albumInfo
+    let albumImgSrc = document.querySelector('#album-info > div:first-child > img')
+    albumImgSrc.src = dataFromSearch.cover_medium
+    
+    let albumTextFather = document.querySelector('#album-info')
+    
+    albumTextFather.insertAdjacentHTML('beforeend',`
+    <div class="right-text">
+          <h6>ALBUM</h6>
+          <h3 class="h2">${dataFromSearch.title}</h3>
+          <p>
+            <img src="./assets/bohemian-small.jfif" alt="">
+            <a href="artist.html?artist_id=${dataFromSearch.artist.id}">${dataFromSearch.artist.name}</a>
+            <span>.</span>
+            <span>2018</span>
+            <span>.</span>
+            <span>${dataFromSearch.nb_tracks} songs</span> <span>${dataFromSearch.duration} </span>
+          </p>
+        </div>`)
+}
+

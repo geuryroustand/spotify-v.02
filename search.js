@@ -52,13 +52,16 @@ const loadDataFromSearchRequest = (userSearchValue) => {
     
 }
 
-
+test
 
 
 function searchUserData(e){
     e.preventDefault()
     let userSearchValue = document.querySelector('#userSearchInput').value
     loadDataFromSearchRequest(userSearchValue)
+    let sectionTitle = document.querySelector('.recently-played-homepage h5')
+    test = sectionTitle
+    sectionTitle.innerText = 'Search Results'
 
 
 }

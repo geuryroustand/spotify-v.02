@@ -43,7 +43,7 @@ function createTracksAlbumPage (){
       <i class="fas fa-play play-icon-ol-list ab d-none" aria-hidden="true"></i>
       <span class="span-minutes">${albumData.duration}</span>
     </div>
-    <a href="artist.html?artist_id=${albumData.artist.id}">${albumData.artist.name}</a>
+    <a href="artist.html?album_Id=${albumData.id}">${albumData.artist.name}</a>
   </span>`) )
    
 }
@@ -67,7 +67,7 @@ function createAlbumInfo(){
           <h3 class="h2">${dataFromSearch.title}</h3>
           <p>
             <img src="./assets/bohemian-small.jfif" alt="">
-            <a href="artist.html?artist_id=${dataFromSearch.artist.id}">${dataFromSearch.artist.name}</a>
+            <a href="artist.html?album_Id=">${dataFromSearch.artist.name}</a>
             <span>.</span>
             <span>2018</span>
             <span>.</span>

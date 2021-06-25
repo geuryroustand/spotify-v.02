@@ -59,7 +59,7 @@ window.onload = () => {
 
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${artistURL}`)
     .then(response => response.json())
-    .then(data => 
+    .then(data => console.log(data)
       
       
       );

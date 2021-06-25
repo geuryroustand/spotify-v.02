@@ -29,7 +29,7 @@ const searchFetchFromBar = (query) => {
         
                 <div class="col-12">
                   <div class="card-body text-left">
-                    <a href="artist.html?artist_id=${data.artist.id}"><h6 class="card-text">${data.artist.name}</h6></a>
+                    <a href="artist.html?album_Id=${data.artist.id}"><h6 class="card-text">${data.artist.name}</h6></a>
                     <h6 class="card-text">${data.title}</h6>
                   </div>
                 </div>

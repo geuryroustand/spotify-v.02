@@ -56,13 +56,11 @@ const createElmentHtml = () => {
 
 window.onload = () => {
   const artistURL = new URLSearchParams(window.location.search).get('album_Id');
+  console.log(artistURL)
 
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${artistURL}`)
     .then(response => response.json())
-    .then(data => console.log(data)
-      
-      
-      );
+    .then(data => console.log(data));
 };
 
 // FETCH with async / await
